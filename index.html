@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arthur | Football, Music & Creative Work</title>
+  <meta name="description" content="The official personal website of Arthur — football, music, creative projects and more.">
+  <meta name="author" content="Arthur">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Arthur | Football, Music & Creative Work">
+  <meta property="og:description" content="Football, music and creative work by Arthur.">
+  <meta property="og:type" content="website">
+
+  <style>
+    :root{
+      --bg:#08090c;
+      --panel:#111319;
+      --text:#f5f7fa;
+      --muted:#a8adb8;
+      --line:#252a33;
+      --accent:#f4c542;
+      --accent2:#fff1a8;
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:
+        radial-gradient(circle at 80% 10%, rgba(244,197,66,.12), transparent 30%),
+        radial-gradient(circle at 10% 35%, rgba(90,110,255,.08), transparent 28%),
+        var(--bg);
+      color:var(--text);
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      line-height:1.6;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(calc(100% - 40px),var(--max));margin:auto}
+    nav{
+      position:sticky;top:0;z-index:10;
+      backdrop-filter:blur(16px);
+      background:rgba(8,9,12,.78);
+      border-bottom:1px solid rgba(255,255,255,.07);
+    }
+    .navin{height:70px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-weight:900;letter-spacing:.08em}
+    .logo span{color:var(--accent)}
+    .links{display:flex;gap:24px;color:var(--muted);font-size:14px}
+    .links a:hover{color:#fff}
+    .hero{min-height:78vh;display:grid;place-items:center;padding:80px 0}
+    .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:60px;align-items:center}
+    .eyebrow{color:var(--accent);font-size:13px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+    h1{font-size:clamp(60px,10vw,120px);line-height:.88;margin:16px 0 24px;letter-spacing:-.07em}
+    .lead{font-size:clamp(18px,2.2vw,24px);color:var(--muted);max-width:680px}
+    .buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+    .btn{
+      padding:13px 20px;border-radius:999px;border:1px solid var(--line);
+      font-weight:800;background:var(--panel)
+    }
+    .btn.primary{background:var(--accent);color:#111;border-color:var(--accent)}
+    .portrait{
+      aspect-ratio:1;border:1px solid var(--line);border-radius:30px;
+      background:linear-gradient(145deg,#1a1d24,#0d0f14);
+      display:grid;place-items:center;overflow:hidden;position:relative;
+    }
+    .portrait::before{
+      content:"ARTHUR";position:absolute;inset:auto -30px 30px;
+      text-align:center;font-size:clamp(50px,7vw,100px);font-weight:950;
+      color:rgba(255,255,255,.035);letter-spacing:-.06em;
+    }
+    .portrait .number{font-size:170px;font-weight:950;color:var(--accent);line-height:1}
+    section{padding:90px 0;border-top:1px solid rgba(255,255,255,.06)}
+    .section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:35px}
+    h2{font-size:42px;letter-spacing:-.04em;margin:0}
+    .muted{color:var(--muted)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{
+      padding:28px;border:1px solid var(--line);border-radius:22px;background:rgba(17,19,25,.72);
+      min-height:220px
+    }
+    .icon{font-size:30px}
+    .card h3{margin:18px 0 8px;font-size:22px}
+    .quote{
+      font-size:clamp(26px,4vw,48px);font-weight:800;line-height:1.1;
+      max-width:850px;letter-spacing:-.04em
+    }
+    footer{padding:40px 0;color:var(--muted);font-size:14px}
+    @media(max-width:800px){
+      .links{display:none}
+      .hero-grid{grid-template-columns:1fr}
+      .portrait{max-width:430px}
+      .cards{grid-template-columns:1fr}
+      h1{font-size:76px}
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Arthur",
+    "url":"https://example.com/",
+    "description":"Football, music and creative work by Arthur."
+  }
+  </script>
+</head>
+
+<body>
+  <nav>
+    <div class="wrap navin">
+      <a class="logo" href="#top">A<span>.</span></a>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#football">Football</a>
+        <a href="#music">Music</a>
+        <a href="#creative">Creative</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Official personal site</div>
+          <h1>Arthur<span style="color:var(--accent)">.</span></h1>
+          <p class="lead">Football. Music. Creative work. A personal space for projects, progress and the things I'm building.</p>
+          <div class="buttons">
+            <a class="btn primary" href="#about">Explore</a>
+            <a class="btn" href="#contact">Contact</a>
+          </div>
+        </div>
+        <div class="portrait" aria-label="Arthur profile image placeholder">
+          <div class="number">16</div>
+        </div>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">01 / About</div>
+            <h2>Meet Arthur.</h2>
+          </div>
+        </div>
+        <p class="lead">Welcome to my official page. This site brings together my football journey, music and creative projects in one place.</p>
+      </div>
+    </section>
+
+    <section id="football">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">02 / Football</div>
+            <h2>On the pitch.</h2>
+          </div>
+          <p class="muted">Matches • Training • Highlights</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="icon">⚽</div><h3>Matchday</h3><p class="muted">Add your best match photos, results and memorable moments here.</p></article>
+          <article class="card"><div class="icon">16</div><h3>Number 16</h3><p class="muted">A simple place to document your football identity and progress.</p></article>
+          <article class="card"><div class="icon">↗</div><h3>Highlights</h3><p class="muted">Add links to public highlight videos or football clips.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="music">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">03 / Music</div>
+            <h2>Make some noise.</h2>
+          </div>
+        </div>
+        <div class="cards">
+          <article class="card"><h3>Glow Different</h3><p class="muted">Add your song description, artwork and streaming links.</p></article>
+          <article class="card"><h3>Say Less</h3><p class="muted">Add your release information and video link.</p></article>
+          <article class="card"><h3>Latest release</h3><p class="muted">Replace this card with your newest song or project.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="creative">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">04 / Creative</div>
+            <h2>Ideas into reality.</h2>
+          </div>
+        </div>
+        <p class="quote">Design, art, experiments and personal projects — all in one place.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="eyebrow">05 / Contact</div>
+        <h2 style="margin:10px 0 15px">Find Arthur.</h2>
+        <p class="lead">Add only public contact and social links that you're comfortable sharing.</p>
+        <div class="buttons">
+          <a class="btn" href="#" aria-label="Instagram placeholder">Instagram</a>
+          <a class="btn" href="#" aria-label="YouTube placeholder">YouTube</a>
+          <a class="btn" href="#" aria-label="TikTok placeholder">TikTok</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year"></span> Arthur. Built as a personal portfolio.</div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
